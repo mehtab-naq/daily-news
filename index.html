@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daily News</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+header {
+  background-color: #1e90ff;
+  color: white;
+  padding: 20px 10px;
+  text-align: center;
+}
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 15px;
+  /* No extra padding needed if footer not fixed */
+}
+section.top-news article {
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+section.categories {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+section.categories div {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  width: 30%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+section.categories div h3 {
+  margin-top: 0;
+  color: #1e90ff;
+}
+footer {
+  background-color: #1e90ff;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  margin-top: 50px;
+  /* Footer no longer fixed */
+  /* position: fixed;
+  bottom: 0;
+  width: 100%; */
+}
+@media (max-width: 768px) {
+  section.categories {
+    flex-direction: column;
+  }
+  section.categories div {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  footer {
+    /* Still no fixed positioning */
+  }
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🗞️ Daily News</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="news.html">News</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="top-news">
+      <h2>Top Headlines</h2>
+
+      <article>
+        <h3>Global Summit on Climate Change Begins</h3>
+        <p>World leaders gather to discuss urgent actions to combat climate change and protect the planet.</p>
+      </article>
+
+      <article>
+        <h3>Technology Advances in AI Transform Healthcare</h3>
+        <p>New AI applications are improving diagnostics and patient care worldwide.</p>
+      </article>
+
+      <article>
+        <h3>Sports: Local Team Wins Championship</h3>
+        <p>The hometown heroes clinched the title after a thrilling final match.</p>
+      </article>
+    </section>
+
+    <section class="categories">
+      <div>
+        <h3>Politics</h3>
+        <p>Updates on government policies, elections, and international relations.</p>
+      </div>
+      <div>
+        <h3>Technology</h3>
+        <p>Latest trends in gadgets, software, and innovation.</p>
+      </div>
+      <div>
+        <h3>Sports</h3>
+        <p>Scores, highlights, and sports news from around the world.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Daily News. All rights reserved.</p>
+  </footer>
+   <script>
+  alert("Welcome to Daily News!");
+</script>
+<button id="backToTop" style="display:none; position: fixed; bottom: 40px; right: 40px; padding: 10px 15px; font-size: 16px; background: #1e90ff; color: white; border: none; border-radius: 5px; cursor: pointer;">↑ Top</button>
+<script>
+  const backToTopButton = document.getElementById("backToTop");
+
+  window.onscroll = function() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      backToTopButton.style.display = "block";
+    } else {
+      backToTopButton.style.display = "none";
+    }
+  };
+
+  backToTopButton.onclick = function() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+</script>
+
+</body>
+</html>
