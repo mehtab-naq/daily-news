@@ -38,3 +38,10 @@ footer {
   width: 100%;
   bottom: 0;
 }
+#dateTime {
+  font-size: 16px;
+  color: #333;
+  text-align: right;
+  padding: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
