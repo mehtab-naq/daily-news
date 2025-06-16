@@ -84,6 +84,8 @@ footer {
 <body>
   <header>
     <h1>🗞️ Daily News</h1>
+    <div id="dateTime"></div>
+
     <nav>
       <a href="index.html">Home</a>
       <a href="news.html">News</a>
@@ -148,6 +150,27 @@ footer {
   backToTopButton.onclick = function() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+</script>
+<script>
+  function updateDateTime() {
+    const now = new Date();
+    const options = { 
+      weekday: 'long', 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true
+    };
+    const formatted = now.toLocaleString('en-US', options);
+    document.getElementById('dateTime').textContent = formatted;
+  }
+
+  // Update immediately and then every second
+  updateDateTime();
+  setInterval(updateDateTime, 1000);
 </script>
 
 </body>
